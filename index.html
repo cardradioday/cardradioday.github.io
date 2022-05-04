@@ -60,7 +60,7 @@ top: 0;
   video2.addEventListener('click', function () {
                 document.documentElement.requestFullscreen();
                 video2.play(); 
-                if (video2.paused) {  
+                if (video2.paused && !p2.style.display) {  
         video2.play();
       }
             });
