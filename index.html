@@ -29,14 +29,14 @@ top: 0;
   <div class="video-card">
     <div class="flex-container">
       <div id="Page1" class="page" style="">
-  <video poster="начало.jpg">
+  <video id="vid1" poster="начало.jpg">
    <source src="открытка на день радио.mp4" type="video/mp4">
    <source src="открытка на день радио.webm" type="video/webm">
    <source src="открытка на день радио.ogv" type="video/ogg">
   </video>
 </div>
 <div id="Page2" class="page" style="display:none">
-  <video poster="начало.jpg" playsinline controls="true">
+  <video id="vid2" poster="начало.jpg" playsinline controls="true">
    <source src="открытка на день радио.mp4" type="video/mp4">
    <source src="открытка на день радио.webm" type="video/webm">
    <source src="открытка на день радио.ogv" type="video/ogg">
@@ -44,8 +44,8 @@ top: 0;
   </div>
   </div>
 <script type="text/javascript">
- var video1 = document.getElementsByTagName('video')[0];
- var video2 = document.getElementsByTagName('video')[1];
+ var video1 = document.getElementById("vid1");
+ var video2 = document.getElementById("vid2");
  var p1 = document.getElementById("Page1");
  var p2 = document.getElementById("Page2");
   video1.addEventListener('click', function () {
