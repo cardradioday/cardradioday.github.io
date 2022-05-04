@@ -51,18 +51,18 @@ top: 0;
   video1.addEventListener('click', function () {
                 document.documentElement.requestFullscreen();
                 video1.play(); 
+                video2.paused();
                 if (video1.paused) {  
         video1.play();
+        video2.paused();
     }
             });
   video2.addEventListener('click', function () {
-    if(p2.style.display == 'block';){
                 document.documentElement.requestFullscreen();
                 video2.play(); 
                 if (video2.paused) {  
         video2.play();
       }
-    }
             });
   video1.addEventListener('timeupdate', function () {
     if(video1.currentTime > 6 &&  video1.currentTime < 6.5){
