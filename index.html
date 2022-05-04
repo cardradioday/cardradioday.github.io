@@ -57,18 +57,13 @@ top: 0;
         video2.stop();
     }
             });
-  video1.addEventListener('play', function () {
-                video2.stop();
-            });
-   video1.addEventListener('paused', function () {
-                video2.stop();
-            });
   video2.addEventListener('click', function () {
-                document.documentElement.requestFullscreen();
+    if(!p1.style.display){document.documentElement.requestFullscreen();
                 video2.play(); 
                 if (video2.paused) {  
         video2.play();
-      }
+      }}
+                
             });
   video1.addEventListener('timeupdate', function () {
     if(video1.currentTime > 6 &&  video1.currentTime < 6.5){
