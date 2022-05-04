@@ -51,16 +51,16 @@ top: 0;
   video1.addEventListener('click', function () {
                 document.documentElement.requestFullscreen();
                 video1.play(); 
-                video2.paused();
+                video2.stop();
                 if (video1.paused) {  
         video1.play();
-        video2.paused();
+        video2.stop();
     }
             });
   video2.addEventListener('click', function () {
                 document.documentElement.requestFullscreen();
                 video2.play(); 
-                if (video2.paused && !p2.style.display) {  
+                if (video2.paused) {  
         video2.play();
       }
             });
