@@ -50,22 +50,20 @@ top: 0;
  var p2 = document.getElementById("Page2");
   video1.addEventListener('click', function () {
                 document.documentElement.requestFullscreen();
-                if (p2.style.display == 'none';){
-                  video1.play(); 
+                video1.play(); 
                 if (video1.paused) {  
         video1.play();
     }
-                }
-                if (p2.style.display == 'block';){
-                  video2.play(); 
+            });
+  video2.addEventListener('click', function () {
+                document.documentElement.requestFullscreen();
+                video2.play(); 
                 if (video2.paused) {  
         video2.play();
     }
-                }
             });
   video1.addEventListener('timeupdate', function () {
-    if (p2.style.display === 'none';){
-      if(video1.currentTime > 6 &&  video1.currentTime < 6.5){
+    if(video1.currentTime > 6 &&  video1.currentTime < 6.5){
       video1.pause();
       video1.currentTime = 7;
     }
@@ -89,15 +87,41 @@ top: 0;
       video1.pause();
       video1.currentTime = 62;
     }
+});
+  video2.addEventListener('timeupdate', function () {
+    if(video2.currentTime > 6 &&  video2.currentTime < 6.5){
+      video2.pause();
+      video2.currentTime = 7;
     }
-    
+    if(video2.currentTime > 16 &&  video2.currentTime < 16.5){
+      video2.pause();
+      video2.currentTime = 17;
+    }
+    if(video2.currentTime > 23 &&  video2.currentTime < 23.5){
+      video2.pause();
+      video2.currentTime = 24;
+    }
+    if(video2.currentTime > 33 &&  video2.currentTime < 33.5){
+      video2.pause();
+      video2.currentTime = 34;
+    }
+    if(video2.currentTime > 42 &&  video2.currentTime < 42.5){
+      video2.pause();
+      video2.currentTime = 43;
+    }
+    if(video2.currentTime > 61 &&  video2.currentTime < 61.5){
+      video2.pause();
+      video2.currentTime = 62;
+    }
 });
   window.addEventListener("resize", function() {
     if(innerWidth<innerHeight){
       video1.pause();
+      video2.pause();
     }
     if(innerWidth>innerHeight){
       video1.play();
+      video2.play();
   }
 
 }, false);
