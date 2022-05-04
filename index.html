@@ -51,42 +51,34 @@ top: 0;
   video1.addEventListener('click', function () {
                 document.documentElement.requestFullscreen();
                 video1.play(); 
-                video2.stop();
                 if (video1.paused) {  
         video1.play();
-        video2.stop();
     }
             });
-  
+
   video1.addEventListener('timeupdate', function () {
     if(video1.currentTime > 6 &&  video1.currentTime < 6.5){
       video1.pause();
-      video2.stop();
       video1.currentTime = 7;
     }
     if(video1.currentTime > 16 &&  video1.currentTime < 16.5){
       video1.pause();
-      video2.stop();
       video1.currentTime = 17;
     }
     if(video1.currentTime > 23 &&  video1.currentTime < 23.5){
       video1.pause();
-      video2.stop();
       video1.currentTime = 24;
     }
     if(video1.currentTime > 33 &&  video1.currentTime < 33.5){
       video1.pause();
-      video2.stop();
       video1.currentTime = 34;
     }
     if(video1.currentTime > 42 &&  video1.currentTime < 42.5){
       video1.pause();
-      video2.stop();
       video1.currentTime = 43;
     }
     if(video1.currentTime > 61 &&  video1.currentTime < 61.5){
       video1.pause();
-      video2.stop();
       video1.currentTime = 62;
     }
 });
@@ -123,7 +115,6 @@ top: 0;
     }
     if(innerWidth>innerHeight){
       video1.play();
-      video2.play();
   }
 
 }, false);
