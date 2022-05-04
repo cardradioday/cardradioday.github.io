@@ -28,15 +28,25 @@ top: 0;
  <body>
   <div class="video-card">
     <div class="flex-container">
+      <div id="Page1" class="page" style="">
   <video poster="начало.jpg">
    <source src="открытка на день радио.mp4" type="video/mp4">
    <source src="открытка на день радио.webm" type="video/webm">
    <source src="открытка на день радио.ogv" type="video/ogg">
   </video>
+</div>
+<div id="Page2" class="page" style="display:none">
+  <video poster="начало.jpg" controls="true">
+   <source src="открытка на день радио.mp4" type="video/mp4">
+   <source src="открытка на день радио.webm" type="video/webm">
+   <source src="открытка на день радио.ogv" type="video/ogg">
+</div>
   </div>
   </div>
 <script type="text/javascript">
  var video1 = document.getElementsByTagName('video')[0];
+ var p1 = document.getElementById("Page1");
+ var p2 = document.getElementById("Page2");
   video1.addEventListener('click', function () {
                 document.documentElement.requestFullscreen();
                 video1.play(); 
@@ -91,7 +101,9 @@ return false;
 }
 
 if(isMobile() === true) {
-    window.location  = 'https://cardradiodayforios.github.io/';
+    /*window.location  = 'https://cardradiodayforios.github.io/';*/
+    p1.style.display = 'none';
+    p2.style.display = 'block';
 }
 </script>
  </body>
