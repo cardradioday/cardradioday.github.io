@@ -44,15 +44,24 @@ top: 0;
   </div>
   </div>
 <script type="text/javascript">
- var video1 = document.getElementsByTagName('video')[1];
+ var video1 = document.getElementsByTagName('video')[0];
+ var video2 = document.getElementsByTagName('video')[0];
  var p1 = document.getElementById("Page1");
  var p2 = document.getElementById("Page2");
   video1.addEventListener('click', function () {
                 document.documentElement.requestFullscreen();
-                video1.play(); 
+                if (p2.style.display === 'none';){
+                  video1.play(); 
                 if (video1.paused) {  
         video1.play();
     }
+                }
+                if (p2.style.display === 'block';){
+                  video2.play(); 
+                if (video2.paused) {  
+        video2.play();
+    }
+                }
             });
   video1.addEventListener('timeupdate', function () {
     if(video1.currentTime > 6 &&  video1.currentTime < 6.5){
