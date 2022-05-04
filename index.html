@@ -57,6 +57,12 @@ top: 0;
         video2.stop();
     }
             });
+  video1.addEventListener('play', function () {
+                video2.stop();
+            });
+   video1.addEventListener('paused', function () {
+                video2.stop();
+            });
   video2.addEventListener('click', function () {
                 document.documentElement.requestFullscreen();
                 video2.play(); 
