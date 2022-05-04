@@ -56,10 +56,12 @@ top: 0;
     }
             });
   video2.addEventListener('click', function () {
+    if(p2.style.display === 'block';){
                 document.documentElement.requestFullscreen();
                 video2.play(); 
                 if (video2.paused) {  
         video2.play();
+      }
     }
             });
   video1.addEventListener('timeupdate', function () {
